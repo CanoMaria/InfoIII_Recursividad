@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package ejercicio2;
+
+import static java.lang.Math.pow;
+import java.util.Scanner;
+
+/**
+ *
+ * @author alumno
+ */
+public class Ejercicio2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int base, exp;
+        Scanner tecla = new Scanner (System.in);
+        System.out.print("Ingrese la base: ");
+        base= tecla.nextInt();
+        
+        System.out.print("Ingrese exponente: ");
+        exp= tecla.nextInt();
+        double potencia= pot (base,exp);
+        System.out.println("Potencia: " + potencia);
+        
+    }
+    
+  public static double pot (int base, int exp)
+  {
+      double i,potencia;
+       
+      if(exp==0)
+      {
+         return potencia= pow(base,0);
+         
+      }
+      
+      else
+      {
+          potencia= base * pot(base,exp-1);
+          return potencia;
+      }
+       
+  }
+}
