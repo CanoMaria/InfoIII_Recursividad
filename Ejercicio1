@@ -1,1 +1,44 @@
-"# InfoIII_Recursividad" 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ejercicio1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author alumno
+ */
+public class Ejercicio1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+
+        Scanner tecla = new Scanner(System.in);
+        int n = 0;
+        System.out.print("Ingrese el numero factorial: ");
+        n = tecla.nextInt();
+        int factorial;
+        factorial = factorial(n);
+        System.out.println("Factorial: " + factorial);
+    }
+
+    public static int factorial(int n) {
+        int x;
+        if (n == 0) {
+            return 1;
+        }
+        int xant = factorial(n - 1) ;
+        x = n *xant;
+         
+        System.out.println(n + " X " + xant + "= " + x + " ");
+
+        return x;
+    }
+
+}
